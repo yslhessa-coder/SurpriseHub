@@ -57,3 +57,21 @@ nextBtn2.addEventListener("click", function(){
         polaroidScreen.classList.add("slide-in");
     }, 800);
 });
+const photoInput = document.querySelector(".photo-input");
+const photoArea = document.querySelector(".photo-area");
+
+photoInput.addEventListener("change", function() {
+    const file = photoInput.files[0];
+
+    if (file) {
+        const image = document.createElement("img");
+        image.src = URL.createObjectURL(file);
+
+        image.style.width = "100%";
+        image.style.height = "100%";
+        image.style.objectFit = "cover";
+
+        photoArea.innerHTML = "";
+        photoArea.appendChild(image);
+    }
+});

@@ -449,3 +449,17 @@ body{
     background: #FFB1CD;
     transform: translateY(-3px) scale(1.05);
 }
+.photo-area label {
+    cursor: pointer;
+    color: #C44D7D;
+    font-size: 17px;
+}
+.photo-input {
+    display: none;
+}
+
+.photo-area label {
+    cursor: pointer;
+    color: #C44D7D;
+    font-size: 17px;
+}
