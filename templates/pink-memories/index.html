@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Pink Memories</title>
 
@@ -75,19 +74,22 @@
                     </div>
                     <div class="polaroid polaroid-2">
                         <div class="photo-area">
-                            <span>+ Add photo</span>
+                             <label for="photoInput2">+ Add photo</label>
+                            <input type="file" accept="image/*" id="photoInput2" class="photo-input">
                         </div>
                          <p>♡</p>
                     </div>
                        <div class="polaroid polaroid-3">
                         <div class="photo-area">
-                            <span>+ Add photo</span>
+                             <label for="photoInput3">+ Add photo</label>
+                            <input type="file" accept="image/*" id="photoInput3" class="photo-input">
                         </div>
                          <p>♡</p>
                     </div>
    <div class="polaroid polaroid-4">
                         <div class="photo-area">
-                            <span>+ Add photo</span>
+                             <label for="photoInput4">+ Add photo</label>
+                            <input type="file" accept="image/*" id="photoInput4" class="photo-input">
                         </div>
                          <p>♡</p>
                     </div>
@@ -96,10 +98,110 @@
                 <button class="next-btn-3">
                     Next ->
                 </button>
-                
-            </section>
-        <script src="script.js"></script>
+</section>
+
+<section class="ending-screen">
+
+                <img src="assets/hearts/heart1.png" class="ending-heart ending-heart-1">
+                <img src="assets/hearts/heart1.png" class="ending-heart ending-heart-2">
+                <img src="assets/bows/bow1.png" class="ending-bow">
+
+                <div class="ending-content">
+
+                    <p class="ending-small">♡ a little message for you ♡</p>
+
+                    <h1>
+                        Some memories may fade,
+                        but the moments we shared
+                        will always mean something to me.
+                    </h1>
+
+                    <p class="ending-message">
+                        Thank you for being a part of my life
+                        and for giving me so many moments
+                        worth remembering.
+                    </p>
+
+                    <p class="ending-signature">
+                        Here's to all the memories we've made
+                        and all the ones still waiting for us. ♡
+                    </p>
+
+                </div>
+
+<button class="ending-next-btn">
+    Next ->
+</button>
+                </section>
+
+                <section class="keepsake-screen">
+
+    <div class="keepsake-photo-section">
+
+        <div class="photo-booth-strip">
+
+            <div class="booth-photo">
+                <label for="boothInput1">+ Add photo</label>
+                <input type="file" accept="image/*" id="boothInput1" class="booth-input">
+            </div>
+
+            <div class="booth-photo">
+                <label for="boothInput2">+ Add photo</label>
+                <input type="file" accept="image/*" id="boothInput2" class="booth-input">
+            </div>
+
+            <div class="booth-photo">
+                <label for="boothInput3">+ Add photo</label>
+                <input type="file" accept="image/*" id="boothInput3" class="booth-input">
+            </div>
+
+            <div class="booth-photo">
+                <label for="boothInput4">+ Add photo</label>
+                <input type="file" accept="image/*" id="boothInput4" class="booth-input">
+            </div>
+
+            <p>♡ memories ♡</p>
+
+        </div>
+
+    </div>
+
+
+    <div class="letter-section">
+
+        <div class="vintage-letter">
+
+            <p class="letter-title">a little letter ♡</p>
+
+            <input 
+                type="text" 
+                class="letter-name" 
+                placeholder="Dear..."
+            >
+
+            <textarea 
+                class="letter-message" 
+                placeholder="Write something from the heart..."
+            ></textarea>
+
+            <input 
+                type="text" 
+                class="letter-signature" 
+                placeholder="With love..."
+            >
+
+        </div>
+
+    </div>
+    <button class="keepsake-next-btn">
+    Next ->
+</button>
+<button class="save-memories-btn">Save my memories ♡</button>
+</section>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="script.js"></script>
 
         </body>
         </html>
+
 
