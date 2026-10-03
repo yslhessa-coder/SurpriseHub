@@ -463,3 +463,395 @@ body{
     color: #C44D7D;
     font-size: 17px;
 }
+@media (max-width: 768px) {
+
+    .polaroid-screen {
+        min-height: 100vh;
+        height: auto;
+        padding-bottom: 100px;
+        overflow-y: auto;
+    }
+
+    .polaroid-screen h1 {
+        font-size: 32px;
+        margin-top: 35px;
+        padding: 0 20px;
+    }
+
+    .polaroid-container {
+        width: 100%;
+        height: 520px;
+        max-width: 600px;
+        margin-top: 10px;
+    }
+
+    .polaroid {
+        width: 150px;
+        height: 180px;
+        padding: 9px 9px 15px;
+    }
+
+    .photo-area {
+        width: 132px;
+        height: 135px;
+        font-size: 14px;
+    }
+
+    .photo-area label {
+        font-size: 14px;
+    }
+
+    .polaroid p {
+        margin-top: 5px;
+        font-size: 15px;
+    }
+
+    .polaroid-1 {
+        top: 30px;
+        left: 8%;
+    }
+
+    .polaroid-2 {
+        top: 55px;
+        left: auto;
+        right: 8%;
+    }
+
+    .polaroid-3 {
+        top: 250px;
+        right: auto;
+        left: 8%;
+    }
+
+    .polaroid-4 {
+        top: 275px;
+        right: 8%;
+    }
+
+    .next-btn-3 {
+        bottom: 25px;
+        right: 20px;
+        padding: 13px 25px;
+        font-size: 16px;
+    }
+}
+
+.ending-screen {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background: #FFEAF4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px;
+    z-index: 10;
+    transform: translateX(100%);
+}
+
+.ending-screen.ending-visible {
+    display: flex;
+    animation: endingSlideIn 0.8s ease forwards;
+}
+
+@keyframes endingSlideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+.ending-content {
+    width: 90%;
+    max-width: 750px;
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.ending-small {
+    font-size: 20px;
+    color: #C44D7D;
+    margin-bottom: 25px;
+}
+
+.ending-content h1 {
+    font-family: 'Fredoka';
+    font-size: 48px;
+    line-height: 1.25;
+    color: #D85A8A;
+    margin: 0 auto 30px;
+    max-width: 700px;
+}
+
+.ending-message {
+    font-size: 21px;
+    line-height: 1.6;
+    color: #B84E77;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.ending-signature {
+    margin: 25px auto 0;
+    max-width: 600px;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #D85A8A;
+}
+.ending-next-btn {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    padding: 16px 34px;
+    border: none;
+    border-radius: 50px;
+    background: #FFC3D8;
+    color: #C44D7D;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(196,77,125,0.18);
+    transition: 0.3s ease;
+    z-index: 5;
+}
+
+.ending-next-btn:hover {
+    background: #FFB1CD;
+    transform: translateY(-3px) scale(1.05);
+}
+.ending-heart {
+    position: absolute;
+    opacity: 0.35;
+    animation: endingFloat 6s ease-in-out infinite;
+}
+
+.ending-heart-1 {
+    width: 70px;
+    top: 15%;
+    left: 12%;
+}
+
+.ending-heart-2 {
+    width: 50px;
+    bottom: 18%;
+    right: 14%;
+    animation-delay: 2s;
+}
+
+.ending-bow {
+    position: absolute;
+    width: 120px;
+    top: 50px;
+    right: 70px;
+    transform: rotate(12deg);
+    opacity: 0.8;
+}
+
+@keyframes endingFloat {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-18px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+.ending-small,
+.ending-content h1,
+.ending-message,
+.ending-signature {
+    visibility: hidden;
+}
+
+.ending-small.typing-active,
+.ending-content h1.typing-active,
+.ending-message.typing-active,
+.ending-signature.typing-active {
+    visibility: visible;
+}
+.keepsake-screen {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    background: #FFEAF4;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    transform: translateX(100%);
+    justify-content: center;
+    align-items: center;
+    gap: 100px;
+    padding: 40px;
+    overflow: hidden;
+}
+.keepsake-screen.keepsake-visible {
+    display: flex;
+    animation: keepsakeSlideIn 0.8s ease forwards;
+}
+
+@keyframes keepsakeSlideIn {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+.keepsake-photo-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-booth-strip {
+    width: 220px;
+    background: #FFF9F0;
+    padding: 18px 18px 25px;
+    box-shadow: 0 10px 25px rgba(120, 60, 90, 0.18);
+    transform: rotate(-4deg);
+    text-align: center;
+}
+
+.booth-photo {
+    width: 184px;
+    height: 145px;
+    background: #FFE1EC;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.booth-photo label {
+    color: #C44D7D;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.booth-input {
+    display: none;
+}
+
+.photo-booth-strip p {
+    margin-top: 12px;
+    color: #D85A8A;
+    font-size: 18px;
+}
+
+.letter-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vintage-letter {
+    width: 500px;
+    min-height: 550px;
+    background: #FFF5DF;
+    padding: 45px;
+    box-shadow: 0 12px 30px rgba(120, 80, 50, 0.15);
+    text-align: center;
+}
+
+.letter-title {
+    font-family: 'Fredoka';
+    font-size: 28px;
+    color: #A86F5A;
+    margin-bottom: 30px;
+}
+
+.letter-name,
+.letter-message,
+.letter-signature {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #765447;
+    font-family: Georgia, serif;
+}
+
+.letter-name {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.letter-message {
+    height: 300px;
+    resize: none;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+.letter-signature {
+    font-size: 19px;
+    margin-top: 15px;
+}
+
+.letter-name::placeholder,
+.letter-message::placeholder,
+.letter-signature::placeholder {
+    color: #B99A8D;
+}
+.keepsake-next-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 40px;
+    padding: 16px 34px;
+    border: none;
+    border-radius: 50px;
+    background: #FFC3D8;
+    color: #C44D7D;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(196,77,125,0.18);
+    transition: 0.3s ease;
+    z-index: 20;
+}
+
+.keepsake-next-btn:hover {
+    background: #FFB1CD;
+    transform: translateY(-3px) scale(1.05);
+}
+
+
+/* View-only mode for the person receiving the link */
+
+body.view-mode .photo-area label,
+body.view-mode .photo-input,
+body.view-mode .booth-photo label,
+body.view-mode .booth-input,
+body.view-mode .save-memories-btn {
+    display: none !important;
+}
+
+body.view-mode .letter-name,
+body.view-mode .letter-message,
+body.view-mode .letter-signature {
+    pointer-events: none;
+    user-select: text;
+    cursor: default;
+}
+body.view-mode .keepsake-screen {
+    display: none;
+}
+
+body.view-mode .keepsake-screen.keepsake-visible {
+    display: flex;
+}
